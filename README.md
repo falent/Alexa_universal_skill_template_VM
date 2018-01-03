@@ -20,7 +20,7 @@ Download and start my VM with Virtualbox. When you start my VM  everything is go
 My VM has scripts that the template can be updated anytime from here!! You don't need to clone this repository by yourself
 
        
-[**Link to the VM:**](http://soon)
+[**Link to the VM:**](https://drive.google.com/open?id=1H0xQT7PKidrgmTQkqQKQBXhZ7M8nrHjW)
 
 [**Link to the VirtualBox:**](https://www.virtualbox.org/wiki/Downloads)
 
