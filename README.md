@@ -24,5 +24,8 @@ My VM has scripts that the template can be updated anytime from here!! You don't
 
 [**Link to the VirtualBox:**](https://www.virtualbox.org/wiki/Downloads)
 
+user: alexa
+pass: opitz
+
 PS: Please be sure you have installed VirtualBox! 
 
