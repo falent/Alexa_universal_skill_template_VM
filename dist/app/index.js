@@ -4,19 +4,17 @@ const alexa_adapter = require("./src/index");
 const bodyParser = require("body-parser");
 const verifier = require('alexa-verifier');
 const app = express();
-var ip = require('ip');
-var ngrok = require('ngrok');
 
-console.log("Your IP for ngrok is: ")
-console.log(ip.address())
+var fs    = require("fs")
+fs.readFile('/home/alexa/Desktop/Template/Alexa_universal_skill_template_VM/ngrokAddress', 'utf8', function (err,data) {
+  if (err) {
+    return console.log(err+" something is wrong with ngrok. Please reboot your VM");
+  }
+  console.log("Your address to Amazon Alexa configuration console:");
+  console.log(data);
+});
 
  
-
-ngrok.connect(8000, function (err, url) {
-console.log("Your address to Amazon Alexa configuration console:");
-console.log(url+"/api/alexa");
-
-}); 
 
 /**
  * start up our http server so we are ready for incoming requests.
