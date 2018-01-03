@@ -14,7 +14,7 @@ console.log(ip.address())
 
 ngrok.connect(8000, function (err, url) {
 console.log("Your address to Amazon Alexa configuration console:");
-console.log(url+"api/alexa");
+console.log(url+"/api/alexa");
 
 }); 
 
