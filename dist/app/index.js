@@ -8,10 +8,10 @@ const app = express();
 var fs    = require("fs")
 fs.readFile('/home/alexa/Desktop/Template/Alexa_universal_skill_template_VM/ngrokAddress', 'utf8', function (err,data) {
   if (err) {
-    return console.log(err+" something is wrong with ngrok. Please reboot your VM");
+    return console.log(err+" something is wrong with ngrok. Please reboot your VM!");
   }
-  console.log("Your address to Amazon Alexa configuration console:");
-  console.log(data);
+  console.log('\x1b[33m%s\x1b[0m', 'Your address to Amazon Alexa configuration console:'); 
+  console.log('\x1b[33m%s\x1b[0m', data);  //yellow
 });
 
  
