@@ -40,7 +40,8 @@
     "mongoose": "^4.10.5",
     "mongodb": "^2.2.26",
     "ip": "1.1.5",
-    "local-ipv4-address": "0.0.2"
+    "local-ipv4-address": "0.0.2",
+    "ngrok":"2.2.24"
 
   }
 }
