@@ -1,4 +1,21 @@
 
+/*Im using mongoDB as a database but you can also work with this VM with Dynamodb
+Dynamodb port runs at port 9001
+
+Example nodejs code:
+var AWS = require("aws-sdk");
+
+AWS.config.update({
+  region: "us-west-2",
+  endpoint: "http://localhost:9001"
+});
+
+var dynamodb = new AWS.DynamoDB();
+
+*/
+
+
+
 var mongoose = require('mongoose');
 //you can decide if you are using heroku or local
 const config = require('../config/settings');

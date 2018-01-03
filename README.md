@@ -27,5 +27,10 @@ My VM has scripts that the template can be updated anytime from here!! You don't
 user: alexa
 pass: opitz
 
-PS: Please be sure you have installed VirtualBox! 
+[How to import ova file to VirtualBox](https://docs.oracle.com/cd/E26217_01/E26796/html/qs-import-vm.html)
+
+If you dont want to download a big VM file you can use a docker solution.
+They are both very similar, but with docker you need to spend a bit more time for setting up your environment
+
+
 
