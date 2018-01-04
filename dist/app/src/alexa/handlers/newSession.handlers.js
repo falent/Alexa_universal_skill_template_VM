@@ -5,7 +5,7 @@ const SpeechOutputUtils = require('../utils/speech-output.utils');
 var User = require('../models/user');
 
 const inNewSessionStartableIntents = [
-    'TemplateIntent'
+    'NameIntent'
 ];
 
 module.exports = {
@@ -23,29 +23,15 @@ module.exports = {
     },
 
     'LaunchIntent': function() {
-        var userID = this.event.session.user.userId;
-        console.log(userID);
-        var self = this;
-        
-        User.findOne({ userId: userID }, function(err, user) {
-        	  if (err ||!user){
-          	    self.emit(':ask',
-          	    		SpeechOutputUtils.pickRandom(self.t('WELCOME')));
-        	  }
-        	  else {
-             	 console.log(user);
-     			 self.emit(':ask',
-    		                SpeechOutputUtils.pickRandom(self.t('WELCOME_OK', user.name))
-    	            );       
-        	  }
-  
-        	});
+    	
+        this.response.speak(SpeechOutputUtils.pickRandom(this.t('WELCOME')).listen(this.t('REPEAT')));
+        this.emit(':responseReady');
+
         
     },
     // Custom Intents:
     'NameIntent': function() {
-        console.log('[NewSessionHandlers] Template');
-        this.handler.state = States.TEMPLATE;
+        this.handler.state = States.NAME;
         this.emitWithState('NameIntent');
     },
     'Unhandled': function () {

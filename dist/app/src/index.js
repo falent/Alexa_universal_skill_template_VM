@@ -6,7 +6,7 @@ const context = require("aws-lambda-mock-context");
 
 const SpeechOutput = require('./alexa/resources/speech-output');
 const newSessionHandlers = require('./alexa/handlers/newSession.handlers');
-const templateHandlers = require('./alexa/handlers/template.handlers');
+const nameHandlers = require('./alexa/handlers/name.handlers');
 
 const config = require("./alexa/config/settings");
 
@@ -44,7 +44,7 @@ if (config.server=="http"){
 	    alexa.resources = SpeechOutput;
 	    alexa.registerHandlers(
 	      newSessionHandlers,
-	      templateHandlers
+	      nameHandlers
 	    );
 	    alexa.execute();
 	};

@@ -2,5 +2,5 @@
 
 module.exports = {
     NONE: '',
-    TEMPLATE: '_TEMPLATE'
+    NAME: '_NAME'
 };
