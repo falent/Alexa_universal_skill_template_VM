@@ -2,10 +2,10 @@
 
 const States = require('./states.const');
 const SpeechOutputUtils = require('../utils/speech-output.utils');
-var User = require('../models/user');
+
 
 const inNewSessionStartableIntents = [
-    'NameIntent'
+    'SharePriceIntent'
 ];
 
 module.exports = {
@@ -24,7 +24,8 @@ module.exports = {
 
     'LaunchIntent': function() {
     	
-        this.response.speak(SpeechOutputUtils.pickRandom(this.t('WELCOME')).listen(this.t('REPEAT')));
+        this.response.speak(SpeechOutputUtils.pickRandom(this.t('WELCOME')))
+            .listen(SpeechOutputUtils.pickRandom(this.t('REPEAT')));
         this.emit(':responseReady');
 
         
@@ -34,23 +35,32 @@ module.exports = {
         this.handler.state = States.NAME;
         this.emitWithState('NameIntent');
     },
-    'Unhandled': function () {
-      this.emit(':ask',
-          SpeechOutputUtils.pickRandom(this.t('UNDEFINED'))
-      );
+    'SharePriceIntent': function() {
+        this.handler.state = States.SHARE_PRICE;
+        this.emitWithState('SharePriceIntent');
     },
-
+    
     // Built-In Intents:
 
     'AMAZON.HelpIntent': function () {
-        this.emit(':ask', SpeechOutputUtils.pickRandom(this.t('HELP')));
+        this.response.speak(SpeechOutputUtils.pickRandom(this.t('HELP')).listen(this.t('REPEAT')));
+        this.emit(':responseReady');
+
     },
 
     'AMAZON.StopIntent': function () {
-        this.emit(':tell', SpeechOutputUtils.pickRandom(this.t('STOP_ANSWER')));
+    	this.response.speak(SpeechOutputUtils.pickRandom(this.t('STOP_ANSWER')));
+        this.emit(':responseReady');
+
     },
 
     'AMAZON.CancelIntent': function () {
-        this.emit(':tell', SpeechOutputUtils.pickRandom(this.t('CANCEL_ANSWER')));
+    	this.response.speak(SpeechOutputUtils.pickRandom(this.t('CANCEL_ANSWER')));
+        this.emit(':responseReady');
+    },
+    'Unhandled': function () {
+        this.response.speak(SpeechOutputUtils.pickRandom(this.t('UNDEFINED')).listen(this.t('REPEAT')));
+        this.emit(':responseReady');
+
     }
 };

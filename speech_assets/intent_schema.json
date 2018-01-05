@@ -3,14 +3,25 @@
     {
       "slots": [
         {
-          "name": "firstname",
-          "type": "AMAZON.DE_FIRST_NAME"
+          "name": "first_name",
+          "type": "AMAZON.US_FIRST_NAME"
         }
       ],
       "intent": "NameIntent"
     },
     {
-      "intent": "TemplateIntent"
+        "slots": [
+          {
+            "name": "room_name",
+            "type": "ROOM_NAMES"
+          },
+          {
+          "name": "number",
+          "type": "AMAZON.NUMBER"
+           }         
+          
+        ],
+        "intent": "ReserveRoomIntent"
     },
     {
       "intent": "AMAZON.HelpIntent"

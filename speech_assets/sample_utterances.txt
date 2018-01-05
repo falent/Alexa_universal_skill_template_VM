@@ -1,1 +1,2 @@
-NameIntent {firstname}
+NameIntent {first_name}
+reserve room {room_name} number {number}
