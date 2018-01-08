@@ -7,30 +7,35 @@ Unfortunately we won't waste time for set up environments if you come unprepared
 
 We will play around with Docker or heroku with MongoDB.  Please use Linux!! I'm not familiar with Windows and I hope you are also Linux fan (or you become one;) Of course you can do everything with Windows but my support will be limited.
 
-# 1. Register or use your Amazon account
-
-[Please register at amazon developer portal ](http://developer.amazon.com/)
-It is free of charge. (if you have ever bought something from Amazon you can use your current account;) **Without developer console you won't be able to test your skill** 
 
 
-# 2. Download my Virtual Machine
+**There are two ways to set-up your environment for developing Alexa skills during our Meetup on January 9, 2018**:
 
-Download and start my VM with Virtualbox. When you start my VM  everything is going to be opened for you. No work from your side!
+![Local Docker installation or virtual box](buttons.png)
 
-My VM has scripts that the template can be updated anytime from here!! You don't need to clone this repository by yourself
+This README describes the usage of my predefined virtual machine (**2**). When you use my VM, everything will be preinstalled and you don't have to do any extra work. My VM contains bash scripts so that the Alexa skill template can be updated any time. Though, the download of the VM might take some time (4.5 GB).
 
-       
-[**Link to the VM**](https://drive.google.com/open?id=1H0xQT7PKidrgmTQkqQKQBXhZ7M8nrHjW)
-
-[**Link to the VirtualBox**](https://www.virtualbox.org/wiki/Downloads)
-
-user: alexa
-pass: opitz
-
-[How to import ova file to VirtualBox](https://docs.oracle.com/cd/E26217_01/E26796/html/qs-import-vm.html)
-
-If you dont want to download a big VM file you can use a docker solution.
-They are both very similar, but with docker you need to spend a bit more time for setting up your environment
+If you'd rather want to use a Docker environment or already have a working Docker installation, then skip this tutorial and [follow the instructions in this detailed tutorial](https://github.com/falent/Alexa_universal_skill_template). With docker you'll need some extra time for setting up your environment.
 
 
 
+# 1 Amazon Developer Account
+
+[Please register at the Amazon Developer Portal ](http://developer.amazon.com/)
+It's free of charge. If you already have an Amazon account, then you don't have to register. You can use the credentials of your existing account. Without the _Amazon Developer Console_ you won't be able to write an Alexa skill.
+
+
+
+# 2 Oracle VirtualBox installation
+Download [Oracle VirtualBox](https://www.virtualbox.org/wiki/Downloads) and install it.
+
+
+
+# 3 Virtual Machine
+
+* Download my [virtual machine](https://drive.google.com/open?id=1H0xQT7PKidrgmTQkqQKQBXhZ7M8nrHjW) for Oracle VirtualBox.
+* Import the _.ova_-File in VirtualBox ([tutorial](https://docs.oracle.com/cd/E26217_01/E26796/html/qs-import-vm.html)) and change the hardware settings so they suit your system (CPU, RAM and network interface).
+* Credentials for the virtual machine:
+
+  * user: _alexa_
+  * password: _opitz_
