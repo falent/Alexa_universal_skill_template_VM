@@ -2,14 +2,14 @@ Hi guys,
 
 Firstly thank you very much that you decided to register for our event.
 
-I'm sending you what you need to participate in the event. Please prepare everything before you come. If you have any problems please don't hesitate to contact me. I will be 1 hour before our meeting at the office available so I could help you also from here.
-Unfortunately we won't waste time for set up environments if you come unprepared :P 
+I'm sending you what you need to participate in the event. Please prepare everything before you come. If you have any problems please don't hesitate to contact me tomasz.krajewski@opitz.consulting.com. I will be 1 hour before our meeting at the office available so I could help you also from here.
+Unfortunately we won't waste time for setting up environments if you come unprepared :P 
 
-We will play around with Docker or heroku with MongoDB.  Please use Linux!! I'm not familiar with Windows and I hope you are also Linux fan (or you become one;) Of course you can do everything with Windows but my support will be limited.
+We will play around with Alexa Skills.  Please use Linux!! I'm not familiar with Windows and I hope you are also Linux fan (or you become one;) Of course you can do everything with Windows but my support will be limited.
 
 
 
-**There are two ways to set-up your environment for developing Alexa skills during our Meetup on January 9, 2018**:
+**There are two ways to set-up your environment for developing Alexa skills during our Meeting**:
 
 ![Local Docker installation or virtual box](buttons.png)
 
